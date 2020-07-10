@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+    div{border-style: none;}
+    td{padding: 3px;}
+    tr.selected {
+    background-color:yellowgreen !important;
+    color:#fff;
+    vertical-align: middle;
+    padding: 1.5em;
+}
+.table tbody tr.highlight td {
+  background-color: #ddd;
+}
+    
+    </style>
+</head>
+
+<body>
+    <form method="POST">
+    <div style="width: 1000px;position: relative;">
+        <h2>Liste de courses</h2>
+        <div style="width: auto;position: absolute;top: 0px;right: 0px;">
+            <button id="btShowList">Afficher la liste</button>
+        </div>
+    </div>
+<br>
+    <div style="width: 500px;float: left;" id="divLists">
+        <h3>Liste enregistrées</h3>
+        <table id="tListOfLists" class="table">
+
+        </table>
+    </div>
+    <div style="width: 500px;float: left;" id="divArticles">
+        <table>
+            <tr>
+                <td style="width: 200px;">Article</td>
+                <td>Catégorie</td>
+            </tr>
+            
+            <tr>
+                <td><input type="text" id="itAddArticle" placeholder="Nom du nouvel article" /></td>
+                <td><select id="listCategories">
+                        <option>Choisir une catégorie</option>
+                    </select>
+                    <button type="submit" id="btAddNewArticle">Valider</button>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            
+            <tr>
+                <td><button id="btSaveList">Enregistrer dans une liste</button></td>
+                <td><input type="text" id="itAddList" placeholder="Nom de la liste" /></td>
+            </tr>
+       
+        
+        </table>
+        <br>
+        <table class="table">
+            <thead>
+            <tr>
+                <td style="width: 200px;">Article</td>
+                <td>Catégorie</td>
+                <td></td>
+            </tr>
+            
+        </thead>
+        <tbody id="tArticleList">
+
+        </tbody>
+        </table>
+    </div>
+</form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
